@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ecomteck
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Ecomteck.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.ecomteck.com/license-agreement.html
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Ecomteck
+ * @package     Ecomteck_Bannerslider
+ * @copyright   Copyright (c) 2019 Ecomteck (http://www.ecomteck.com/)
+ * @license     http://www.ecomteck.com/license-agreement.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Ecomteck_Bannerslider::bannerslider" title="Banner Slider" module="Ecomteck_Bannerslider" sortOrder="10" resource="Ecomteck_Bannerslider::bannerslider" parent="Magento_Backend::content"/>
+
+        <!-- Ecomteck_Bannerslider::bannerslider_bannerslider -->
+
+		<add id="Ecomteck_Bannerslider::bannerslider_sliders" title="Manage Sliders" module="Ecomteck_Bannerslider" sortOrder="10" parent="Ecomteck_Bannerslider::bannerslider" action="bannerslideradmin/slider" resource="Ecomteck_Bannerslider::bannerslider_sliders"/>
+
+        <add id="Ecomteck_Bannerslider::bannerslider_banners" title="Manage Banners" module="Ecomteck_Bannerslider" sortOrder="10" parent="Ecomteck_Bannerslider::bannerslider" action="bannerslideradmin/banner" resource="Ecomteck_Bannerslider::bannerslider_banners"/>
+
+        <add id="Ecomteck_Bannerslider::bannerslider_coreslider" title="Preview Slider Styles" module="Ecomteck_Bannerslider" sortOrder="10" parent="Ecomteck_Bannerslider::bannerslider" action="bannerslideradmin/coreslider" resource="Ecomteck_Bannerslider::bannerslider_coreslider"/>
+
+        <!-- Ecomteck_Bannerslider::bannerslider_reports -->
+        <add id="Ecomteck_Bannerslider::bannerslider_reports_perslider" title="Reports Per Slider" module="Ecomteck_Bannerslider" sortOrder="10" parent="Ecomteck_Bannerslider::bannerslider" action="bannerslideradmin/report" resource="Ecomteck_Bannerslider::bannerslider_reports_perslider"/>
+        <add id="Ecomteck_Bannerslider::bannerslider_reports_allslider" title="Reports All Sliders" module="Ecomteck_Bannerslider" sortOrder="10" parent="Ecomteck_Bannerslider::bannerslider" action="bannerslideradmin/report/banner" resource="Ecomteck_Bannerslider::bannerslider_reports_allslider"/>
+        <!-- End Ecomteck_Bannerslider::bannerslider_reports -->
+
+        <add id="Ecomteck_Bannerslider::settings" title="Settings" module="Ecomteck_Bannerslider" sortOrder="20" parent="Ecomteck_Bannerslider::bannerslider" action="adminhtml/system_config/edit/section/bannerslider" resource="Ecomteck_Bannerslider::settings"/>
+
+        <!-- End Ecomteck_Bannerslider::bannerslider_bannerslider -->
+    </menu>
+</config>

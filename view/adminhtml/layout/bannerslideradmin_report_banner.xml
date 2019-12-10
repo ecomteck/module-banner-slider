@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Ecomteck
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Ecomteck.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.ecomteck.com/license-agreement.html
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Ecomteck
+ * @package     Ecomteck_Bannerslider
+ * @copyright   Copyright (c) 2019 Ecomteck (http://www.ecomteck.com/)
+ * @license     http://www.ecomteck.com/license-agreement.html
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="formkey"/>
+    <head>
+    	<title>Report Manager</title>
+    </head>
+    <body>
+    	<referenceBlock name="menu">
+    	    <action method="setActive">
+    	        <argument name="itemId" xsi:type="string">Ecomteck_Bannerslider::bannerslider</argument>
+    	    </action>
+    	</referenceBlock>
+    	<referenceBlock name="page.title">
+    	    <action method="setPageTitle">
+    	        <argument name="pageTitle" xsi:type="string">Report Clicks and Impressions of a Banner in all Sliders</argument>
+    	    </action>
+    	</referenceBlock>
+        <referenceContainer name="content">
+            <block class="Ecomteck\Bannerslider\Block\Adminhtml\Report" name="admin.block.report.grid.container"/>
+        </referenceContainer>
+    </body>
+</page>

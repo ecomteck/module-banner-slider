@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Ecomteck
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Ecomteck.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.ecomteck.com/license-agreement.html
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Ecomteck
+ * @package     Ecomteck_Bannerslider
+ * @copyright   Copyright (c) 2019 Ecomteck (http://www.ecomteck.com/)
+ * @license     http://www.ecomteck.com/license-agreement.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="bannerslideradmin" frontName="bannerslideradmin">
+            <module name="Ecomteck_Bannerslider"/>
+        </route>
+    </router>
+</config>

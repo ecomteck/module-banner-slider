@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Ecomteck
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Ecomteck.com license that is
+ * available through the world-wide-web at this URL:
+ * http://www.ecomteck.com/license-agreement.html
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Ecomteck
+ * @package     Ecomteck_Bannerslider
+ * @copyright   Copyright (c) 2019 Ecomteck (http://www.ecomteck.com/)
+ * @license     http://www.ecomteck.com/license-agreement.html
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Banner Slider</title>
+    </head>
+    <body>
+        <referenceBlock name="menu">
+            <action method="setActive">
+                <argument name="itemId" xsi:type="string">Ecomteck_Bannerslider::bannerslider</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="page.main.actions">
+            <block class="Magento\Backend\Block\Store\Switcher" name="store_switcher">
+                <action method="setUseConfirm">
+                    <argument name="params" xsi:type="string">1</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+        <block class="Ecomteck\Bannerslider\Block\Adminhtml\Banner\Edit" name="banner_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+        <block class="Ecomteck\Bannerslider\Block\Adminhtml\Banner\Edit\Tabs" name="banner_edit_tabs">
+            <block class="Ecomteck\Bannerslider\Block\Adminhtml\Banner\Edit\Tab\Banner" name="banner_edit_tab_banner"/>
+        	<action method="addTab">
+                <argument name="name" xsi:type="string">main_section</argument>
+                <argument name="block" xsi:type="string">banner_edit_tab_banner</argument>
+            </action>
+        </block>
+        </referenceContainer>
+    </body>
+</page>
